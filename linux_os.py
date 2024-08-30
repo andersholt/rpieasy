@@ -75,7 +75,7 @@ class autorun:
        if is_package_installed("screen"):
         f.write(self.ENABLE_RPIAUTOSTART+"\n")
        else:
-        f.write(self.ENABLE_RPIAUTOSTART2+"\n") 
+        f.write(self.ENABLE_RPIAUTOSTART2+"\n")
       if self.hdmienabled == False and rpieGlobals.ossubtype==10:
        f.write(self.DISABLE_HDMI+"\n")
       f.write(self.RC_ENDMARKER+"\n")
@@ -198,7 +198,7 @@ def read_cpu_temp():
  therm2 = misc.str2num2(res)
 # print("D:",therm2,thermalzone)
  if therm2 > 300:
-  therm2 = misc.str2num2(therm2 /1000) 
+  therm2 = misc.str2num2(therm2 /1000)
  return therm2
 
 def read_cpu_temp_sensor():
@@ -214,7 +214,7 @@ def read_cpu_temp_sensor():
        except Exception as e:
         pass
     except:
-     pass 
+     pass
     if len(t)<1:
      return 0
     else:
@@ -379,84 +379,84 @@ def getRPIVer():
      if len(hwid)>6:
       hwid = hwid[1:]
      if (hwid == "0002") or (hwid == "0003"):
-      hwarr = { 
+      hwarr = {
        "name": "Pi 1 Model B",
        "ram": "256MB",
        "pins": "26R1",
        "lan": "1"
       }
      elif (hwid == "0004") or (hwid == "0005") or (hwid == "0006"):
-      hwarr = { 
+      hwarr = {
        "name": "Pi 1 Model B",
        "ram": "256MB",
        "pins": "26R2",
        "lan": "1"
       }
      elif (hwid == "0007") or (hwid == "0008") or (hwid == "0009"):
-      hwarr = { 
+      hwarr = {
        "name": "Pi 1 Model A",
        "ram": "256MB",
        "pins": "26R1"
       }
      elif (hwid == "000d") or (hwid == "000e") or (hwid == "000f"):
-      hwarr = { 
+      hwarr = {
        "name": "Pi 1 Model B",
        "ram": "512MB",
        "pins": "26R2",
        "lan": "1"
       }
      elif (hwid == "0010") or (hwid == "0013") or (hwid == "900032"):
-      hwarr = { 
+      hwarr = {
        "name": "Pi 1 Model B+",
        "ram": "512MB",
        "pins": "40",
        "lan": "1"
       }
      elif (hwid == "0011") or (hwid == "0014"):
-      hwarr = { 
+      hwarr = {
        "name": "Pi Compute Module 1",
        "ram": "512MB",
        "pins": "200"
       }
      elif (hwid == "a020a0"):
-      hwarr = { 
+      hwarr = {
        "name": "Pi Compute Module 3",
        "ram": "1GB",
        "pins": "200"
       }
      elif (hwid == "0012"):
-      hwarr = { 
+      hwarr = {
        "name": "Pi 1 Model A+",
        "ram": "256MB",
        "pins": "40"
       }
      elif (hwid == "0015"):
-      hwarr = { 
+      hwarr = {
        "name": "Pi 1 Model A+",
        "ram": "256/512MB",
        "pins": "40"
       }
      elif (hwid == "900021"):
-      hwarr = { 
+      hwarr = {
        "name": "Pi 1 Model A+",
        "ram": "512MB",
        "pins": "40"
       }
      elif  (hwid == "a01040") or (hwid == "a01041") or (hwid == "a21041") or (hwid == "a22042"):
-      hwarr = { 
+      hwarr = {
        "name": "Pi 2 Model B",
        "ram": "1GB",
        "pins": "40",
        "lan": "1"
       }
      elif (hwid == "900092") or (hwid == "900093") or (hwid == "920092") or (hwid == "920093"):
-      hwarr = { 
+      hwarr = {
        "name": "Pi Zero",
        "ram": "512MB",
        "pins": "40"
       }
      elif (hwid == "9000c1"):
-      hwarr = { 
+      hwarr = {
        "name": "Pi Zero W",
        "ram": "512MB",
        "pins": "40",
@@ -464,7 +464,7 @@ def getRPIVer():
        "bt":"1"
       }
      elif (hwid == "902120"):
-      hwarr = { 
+      hwarr = {
        "name": "Pi Zero 2W",
        "ram": "512MB",
        "pins": "40",
@@ -472,7 +472,7 @@ def getRPIVer():
        "bt":"1"
       }
      elif (hwid == "a02082") or (hwid == "a22082") or (hwid == "a32082") or (hwid == "a52082") or (hwid == "a22083"):
-      hwarr = { 
+      hwarr = {
        "name": "Pi 3 Model B",
        "ram": "1GB",
        "pins": "40",
@@ -480,8 +480,8 @@ def getRPIVer():
        "lan":"1",
        "bt":"1"
       }
-     elif (hwid == "a020d3"):
-      hwarr = { 
+     elif (hwid == "a020d3") or (hwid == "a020d4"):
+      hwarr = {
        "name": "Pi 3 Model B+",
        "ram": "1GB",
        "pins": "40",
@@ -490,7 +490,7 @@ def getRPIVer():
        "bt":"1"
       }
      elif (hwid == "9020e0"):
-      hwarr = { 
+      hwarr = {
        "name": "Pi 3 Model A+",
        "ram": "512MB",
        "pins": "40",
@@ -498,7 +498,7 @@ def getRPIVer():
        "bt":"1"
       }
      elif (hwid == "a03111"):
-      hwarr = { 
+      hwarr = {
        "name": "Pi 4 Model B",
        "ram": "1GB",
        "pins": "40",
@@ -507,7 +507,7 @@ def getRPIVer():
        "bt":"1"
       }
      elif (hwid in "b03111,b03112,b03114"):
-      hwarr = { 
+      hwarr = {
        "name": "Pi 4 Model B",
        "ram": "2GB",
        "pins": "40",
@@ -516,7 +516,7 @@ def getRPIVer():
        "bt":"1"
       }
      elif (hwid in "c03111,c03112,c03114,c03115"):
-      hwarr = { 
+      hwarr = {
        "name": "Pi 4 Model B",
        "ram": "4GB",
        "pins": "40",
@@ -525,7 +525,7 @@ def getRPIVer():
        "bt":"1"
       }
      elif (hwid == "c03130"):
-      hwarr = { 
+      hwarr = {
        "name": "Pi 400 Rev1",
        "ram": "4GB",
        "pins": "40",
@@ -534,7 +534,7 @@ def getRPIVer():
        "bt":"1"
       }
      elif (hwid in "d03114,d03115"):
-      hwarr = { 
+      hwarr = {
        "name": "Pi 4 Model B",
        "ram": "8GB",
        "pins": "40",
@@ -543,7 +543,7 @@ def getRPIVer():
        "bt":"1"
       }
      elif (hwid in "c04170"):
-      hwarr = { 
+      hwarr = {
        "name": "Pi 5",
        "ram": "4GB",
        "pins": "40",
@@ -552,7 +552,7 @@ def getRPIVer():
        "bt":"1"
       }
      elif (hwid in "d04170"):
-      hwarr = { 
+      hwarr = {
        "name": "Pi 5",
        "ram": "8GB",
        "pins": "40",
@@ -567,7 +567,7 @@ def getsounddevs(playbackdevs = True):
     try:
      if playbackdevs:
       output = os.popen('aplay -l 2>/dev/null')
-     else: 
+     else:
       output = os.popen('arecord -l 2>/dev/null')
      for line in output:
       devname = ""
@@ -580,7 +580,7 @@ def getsounddevs(playbackdevs = True):
       if devname!="":
        devlist.append([devpos,devname])
     except:
-     pass 
+     pass
     return devlist
 
 def getsoundsel():
@@ -723,7 +723,7 @@ def getfirstusername():
         uptr.append(int(l[0]))
         unames.append(l[1])
     except:
-     pass 
+     pass
     if len(uptr)>0:
      return unames[0]
     else:
@@ -853,7 +853,7 @@ def checkOPI():
    return False
 
 def getarmbianinfo():
-    hwarr = { 
+    hwarr = {
       "name": "Unknown model",
       "shortname":"unknown",
       "version":"0.0",
